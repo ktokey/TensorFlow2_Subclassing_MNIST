@@ -40,8 +40,6 @@ if not os.path.exists(checkpoint_path):
 
 #----------------------------
 # データの作成
-# 画像サイズ（高さ，幅，チャネル数）
-H, W, C = 28, 28, 1
 
 # MNISTデータの読み込み
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
@@ -50,9 +48,9 @@ H, W, C = 28, 28, 1
 x_train = x_train / 255.
 x_test = x_test / 255.
 
-# （データ数，高さ，幅，チャネル数）にrehspae
-x_train = x_train.reshape(x_train.shape[0], H, W, C)
-x_test = x_test.reshape(x_test.shape[0], H, W, C)
+# チャネル軸を追加
+x_train = np.expand_dims(x_train, axis=-1)
+x_test = np.expand_dims(x_test, axis=-1)
 
 # データ供給ライブラリを利用
 TRAIN_SIZE = int(0.8 * len(x_train))
