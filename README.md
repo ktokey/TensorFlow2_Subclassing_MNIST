@@ -1,6 +1,7 @@
 # TensorFlow2_Subclassing_MNIST
  
 TensorFlow2.x系のSubclassing APIを用いてMNIST分類問題を解くサンプルコード
+
 解説という程でもありませんが、[ブログ](https://qiita.com/ktokey/items/63d695d4c9f38c59b6d6)にて紹介しています。
  
 # Requirement

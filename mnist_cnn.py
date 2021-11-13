@@ -22,7 +22,7 @@ else:
 # parameter setting
 visual_path = 'visualization'
 checkpoint_path = 'checkpoint'
-checkpoint_file = 'weights.ckpt'
+checkpoint_file = 'weights_cnn.ckpt'
 
 BATCH_SIZE = 128
 Epochs = 10
